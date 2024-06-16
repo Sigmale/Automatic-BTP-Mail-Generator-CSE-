@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Web App</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <form action="/" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="entry_number">Entry Number:</label><br>
+        <input type="text" id="entry_number" name="entry_number" required><br>
+        
+        <label for="department">Select Department:</label><br>
+        <select id="department" name="department" required>
+            <option value="" disabled selected>Select your department</option>
+            {% for dept_name, _ in departments.items() %}
+                <option value="{{ dept_name }}">{{ dept_name }}</option>
+            {% endfor %}
+        </select><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

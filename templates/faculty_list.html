@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty List</title>
+</head>
+<body>
+    <h1>Hello, {{ name }}!</h1>
+    <h2>Faculty List for {{ entry_number }}</h2>
+    
+    <ul>
+        {% for faculty_name in faculty_names %}
+            <li><a href="/professor-research?professor_name={{ faculty_name }}">{{ faculty_name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
